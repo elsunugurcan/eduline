@@ -1,0 +1,41 @@
+{
+ "at": "2026-09-29T10:06:33.966Z",
+ "backup": {
+  "file": "backups/eduline-2026-09-29T10-06-19-504Z.db",
+  "sizeMB": 61.3,
+  "method": "VACUUM INTO",
+  "ms": 254,
+  "sha256": "bc12344c338d5ecb06d59822103dc69b281222e1feb69989508873e847d430f4",
+  "integrity": "ok",
+  "counts": {
+   "students": 15000,
+   "courses": 120,
+   "enrollments": 60000,
+   "lessons": 4800,
+   "exams": 300,
+   "questions": 12000,
+   "submissions": 404373
+  },
+  "submissionsBefore": 404373,
+  "submissionsAfterLive": 424735,
+  "consistent": true
+ },
+ "loadDuringBackup": {
+  "rps": 3815.8,
+  "p95": 17.3,
+  "errors": 0,
+  "requests": 45804
+ },
+ "restore": {
+  "rtoMs": 514,
+  "ready": true,
+  "sampleCourses": 4,
+  "sampleSubmitStatus": 201,
+  "sampleSubmit": {
+   "score": 26,
+   "rank": 1007,
+   "total": 1388
+  }
+ },
+ "passed": true
+}

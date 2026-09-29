@@ -1,0 +1,160 @@
+{
+ "slo": {
+  "p95": 500,
+  "errorRate": 0.01
+ },
+ "targetRps": 300,
+ "targetNote": "3.000 eşzamanlı öğrenci × 0,1 istek/sn",
+ "levels": [
+  1,
+  5,
+  10,
+  25,
+  50,
+  100,
+  200
+ ],
+ "durationSec": 8,
+ "versions": {
+  "v1": {
+   "rows": [
+    {
+     "vus": 1,
+     "rps": 15.2,
+     "p50": 89.9,
+     "p95": 138.3,
+     "p99": 150.6,
+     "errorRate": 0,
+     "withinSlo": true
+    },
+    {
+     "vus": 5,
+     "rps": 19,
+     "p50": 230.4,
+     "p95": 524.3,
+     "p99": 677.4,
+     "errorRate": 0,
+     "withinSlo": false
+    },
+    {
+     "vus": 10,
+     "rps": 20.6,
+     "p50": 442.8,
+     "p95": 970.1,
+     "p99": 1425,
+     "errorRate": 0,
+     "withinSlo": false
+    },
+    {
+     "vus": 25,
+     "rps": 16.8,
+     "p50": 1403.9,
+     "p95": 1848.5,
+     "p99": 3038.8,
+     "errorRate": 0,
+     "withinSlo": false
+    },
+    {
+     "vus": 50,
+     "rps": 18.3,
+     "p50": 2209.9,
+     "p95": 2571,
+     "p99": 4211.5,
+     "errorRate": 0.0683,
+     "withinSlo": false
+    },
+    {
+     "vus": 100,
+     "rps": 15,
+     "p50": 610.2,
+     "p95": 1391.2,
+     "p99": 3751.3,
+     "errorRate": 0.5354,
+     "withinSlo": false
+    },
+    {
+     "vus": 200,
+     "rps": 0,
+     "p50": 0,
+     "p95": 0,
+     "p99": 0,
+     "errorRate": 1,
+     "withinSlo": false
+    }
+   ],
+   "maxRpsWithinSlo": 15.2,
+   "atVus": 1,
+   "headroom": 0.05
+  },
+  "v2": {
+   "rows": [
+    {
+     "vus": 1,
+     "rps": 2238.9,
+     "p50": 0.3,
+     "p95": 0.8,
+     "p99": 1.5,
+     "errorRate": 0,
+     "withinSlo": true
+    },
+    {
+     "vus": 5,
+     "rps": 3506.8,
+     "p50": 0.6,
+     "p95": 4.2,
+     "p99": 15.6,
+     "errorRate": 0,
+     "withinSlo": true
+    },
+    {
+     "vus": 10,
+     "rps": 4120,
+     "p50": 1.1,
+     "p95": 7.3,
+     "p99": 23,
+     "errorRate": 0,
+     "withinSlo": true
+    },
+    {
+     "vus": 25,
+     "rps": 4707.5,
+     "p50": 2.3,
+     "p95": 16.4,
+     "p99": 57.2,
+     "errorRate": 0,
+     "withinSlo": true
+    },
+    {
+     "vus": 50,
+     "rps": 4654.8,
+     "p50": 5.6,
+     "p95": 33.3,
+     "p99": 87.7,
+     "errorRate": 0,
+     "withinSlo": true
+    },
+    {
+     "vus": 100,
+     "rps": 4508.2,
+     "p50": 12.6,
+     "p95": 71.3,
+     "p99": 138.2,
+     "errorRate": 0,
+     "withinSlo": true
+    },
+    {
+     "vus": 200,
+     "rps": 4138.1,
+     "p50": 30.6,
+     "p95": 128.6,
+     "p99": 224.3,
+     "errorRate": 0,
+     "withinSlo": true
+    }
+   ],
+   "maxRpsWithinSlo": 4707.5,
+   "atVus": 25,
+   "headroom": 15.69
+  }
+ }
+}

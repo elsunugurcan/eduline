@@ -1,0 +1,32 @@
+{
+  "name": "eduline-platform-ops",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Eduline eğitim platformu — izleme, uyarı, durum sayfası, kapasite planı, kesintisiz dağıtım ve yedek tatbikatı",
+  "scripts": {
+    "seed": "node app/seed.mjs",
+    "start:v1": "node app/server.mjs --version v1 --db data/v1.db --port 8301 --log data/v1.log",
+    "start:v2": "node app/server.mjs --version v2 --db data/v2.db --port 8302 --log data/v2.log",
+    "monitor": "node monitor/monitor.mjs --target http://localhost:8302 --port 8400",
+    "deploy": "node ops/deploy.mjs",
+    "test": "node --test test/*.test.mjs",
+    "peak": "node ops/exam-peak.mjs v1 && node ops/exam-peak.mjs v2",
+    "capacity": "node load/capacity.mjs 8",
+    "drill": "node ops/backup-drill.mjs",
+    "audit": "node scripts/audit.mjs",
+    "report": "node scripts/report.mjs --shots",
+    "all": "npm run seed && npm test && npm run peak && npm run capacity && npm run drill && npm run audit && npm run report"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "author": "Uğur Can Elsun"
+}
